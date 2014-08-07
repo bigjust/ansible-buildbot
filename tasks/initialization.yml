@@ -6,7 +6,7 @@
 - name: buildbot master configuration
   sudo_user: "{{ buildbot_user }}"
   template:
-    src: master.cfg.js
+    src: "{{ buildbot_template_master_cfg }}"
     dest: "{{ buildbot_home }}/master/master.cfg"
   when: buildbot_generate_master_cfg
 
